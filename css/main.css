@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Digital Numbers Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Digital Numbers Regular'), url('../fonts/DigitalNumbers-Regular.woff') format('woff');
+}
+
+body {
+
+}
+#settings button {
+    border: 1px solid #565656;
+    background: #bdbdbd;
+}
+#settings button.active {
+    border-color: #bdbdbd;
+    background-color: #565656;
+    color: #fff;
+}
+#game {
+    background: #cecece;
+    margin: 0 auto;
+}
+#game.ready {
+    border: 2px solid #565656;
+    display: inline-block;
+}
+#game .cell {
+    background-position: center;
+    background-size: contain;
+    border: 1px solid #868686;
+    cursor: pointer;
+    font-weight: bold;
+    float: left;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+#game .cell.o {
+    background-color: #aeaeae;
+    cursor: default;
+}
+#game .cell.o.c-1 {
+    color: #050583;
+}
+#game .cell.o.c-2 {
+    color: #078407;
+}
+#game .cell.o.c-3 {
+    color: #826804;
+}
+#game .cell.o.c-4 {
+    color: #6c1e5b;
+}
+#game .cell.o.c-5 {
+    color: #bd0404;
+}
+#game .cell.o.c-6 {
+    color: #8c0101;
+}
+#game .cell.o.c-7 {
+    color: #b55d07;
+}
+#game .cell.o.c-8 {
+    color: #343434;
+}
+#game .cell.q {
+    background-image: url('../img/q.png');
+}
+#game .cell.f {
+    background-image: url('../img/f.png');
+}
+#game .cell.b {
+    background-color: #bd0404;
+    background-image: url('../img/b.png');
+}
+.infobox {
+    background: #000;
+    color: #bd0404;
+    font-family: 'Digital Numbers Regular', sans-serif;
+    display: inline-block;
+    font-size: 30px;
+    padding: 0 5px;
+    text-align: center;
+}

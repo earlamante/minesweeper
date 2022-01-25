@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<section id="settings" class="container text-center py-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Minesweeper</h1>
+        </div>
+        <div class="col-12">
+            <h4>Difficulty</h4>
+            <button class="easy">Easy</button>
+            <button class="normal active">Normal</button>
+            <button class="hard">Hard</button>
+            <button class="expert">Expert</button>
+        </div>
+    </div>
+</section>
+
+<section id="game_wrapper" class="container">
+    <div class="row py-2">
+        <div class="col-6">
+            <div id="cells" class="infobox">000</div>
+        </div>
+        <div class="col-6" style="text-align: right;">
+            <div id="mines" class="infobox">000</div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-12">
+            <div id="game" class="">
+                <div class="screen">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    window.ga = function () {
+        ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'G-LKE652V2VV', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('set', 'transport', 'beacon');
+    ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
