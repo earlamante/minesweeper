@@ -88,6 +88,12 @@ var game = {};
     function infobox() {
         var mines = game.mines - gs.find('.cell.f').length,
             cells = game.cells - gs.find('.cell.o').length;
+
+        if(cells === game.mines) {
+            game.state = -2;
+            setTimeout(game_over(), 1);
+        }
+
         $('#cells').text(f(cells));
         $('#mines').text(f(mines));
     }
@@ -220,8 +226,8 @@ var game = {};
         }
         $('#game_wrapper').css('max-width', ((game.cols * w) + 30) + 'px'); // +30 because of padding
         gs.css({
-            width: (game.cols * w) + 'px',
-            height: (game.rows * w) + 'px'
+            width: ((game.cols * w) + 4) + 'px',
+            height: ((game.rows * w) + 4) + 'px'
         });
         gs.find('.screen').html('');
         gs.find('.screen').html(h);
@@ -258,13 +264,21 @@ var game = {};
         save();
         setDifficulty(game.level);
         render();
+        gs.addClass('ready');
     }
 
     function game_over() {
-        for (var i = 0; i < game.key.length; i++) {
-            game.matrix[game.key[i]] = -1;
+        if(gs.hasClass('ready')) {
+            if(game.state == -1) {
+                alert('Game Over!');
+                for (var i = 0; i < game.key.length; i++) {
+                    game.matrix[game.key[i]] = -1;
+                }
+                draw();
+            } else {
+                alert('Wow! You win!');
+            }
         }
-        draw();
         disabled = 1;
     }
 
