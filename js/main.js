@@ -5,26 +5,32 @@ var game = {};
         gs = $('#game'),
         settings = $('#settings'),
         l = {
-            easy: {cells: 25, cols: 5, rows: 5, mines: 5, level: 'easy'},
+            easy: {
+                cells: 36,
+                cols: 6,
+                rows: 6,
+                mines: 6,
+                level: 'easy'
+            },
             normal: {
-                cells: 64,
-                cols: 8,
-                rows: 8,
-                mines: 15,
+                cells: 81,
+                cols: 9,
+                rows: 9,
+                mines: 13,
                 level: 'normal'
             },
             hard: {
-                cells: 150,
-                cols: 15,
-                rows: 10,
+                cells: 256,
+                cols: 16,
+                rows: 16,
                 mines: 40,
                 level: 'hard'
             },
             expert: {
-                cells: 300,
-                cols: 20,
-                rows: 15,
-                mines: 100,
+                cells: 480,
+                cols: 30,
+                rows: 16,
+                mines: 99,
                 level: 'expert'
             },
         },
